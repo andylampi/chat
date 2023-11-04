@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #3b4a54;
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: #35dfba;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.users {
+  height: 100%;
+  width: 30%;
+  background-color: aliceblue;
+  border-radius: 20px 0px 0px 20px;
+
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.chat {
+  height: 100%;
+  width: 100%;
+}
+
+.user {
+  width: 100%;
+  height: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.user img {
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+.user .message {
+  width: 65%;
+}
+
+.circle_green {
+  background-color: #35dfba;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 100%;
+}
+
+.separator {
+  width: 90%;
+  height: 2px;
+  background-color: grey;
+  border-radius: 30px;
+}
+
+.father_separator {
+  display: flex;
+  justify-content: center;
+}
