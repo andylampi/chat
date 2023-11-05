@@ -22,15 +22,17 @@ code {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .main {
-  background-color: #35dfba;
-  width: 80%;
-  height: 80%;
+  background-color: #2c3d49;
+  width: 100%;
+  height: 90%;
   border-radius: 20px;
+  display: flex;
 }
 
 .users {
@@ -49,7 +51,7 @@ h1 {
 
 .chat {
   height: 100%;
-  width: 100%;
+  width: 80%;
 }
 
 .user {
@@ -74,7 +76,7 @@ h1 {
 }
 
 .circle_green {
-  background-color: #35dfba;
+  background-color: #2c3d49;
   height: 30px;
   width: 30px;
   display: flex;
@@ -91,7 +93,75 @@ h1 {
   border-radius: 30px;
 }
 
-.father_separator {
+.container_separator {
   display: flex;
   justify-content: center;
+}
+
+.container_main{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.container_search_user{
+  height: 10%;
+  width: 100%;
+  background-color: #2c3d49;
+  display: flex;
+}
+.search_user{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.search_user input{
+  border: 1px solid white;
+  background-color: transparent;
+  width: 60%;
+  height:40%;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.show_users{
+  height: 40%;
+  width: 30%;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+.box_search_user{
+  width: 70%;
+}
+.user .container_name_nmb_msg{
+  width: 90%;
+  display: flex;
+  align-items: center;
+
+}
+.container_name_nmb_msg .name{
+  width: 70%;
+}
+.container_name_msg{
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.container_name_msg .name{
+  font-weight: 800;
+}
+.container_name_msg p{
+  font-style: mont;
+  margin: 0;
 }

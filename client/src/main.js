@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import io from 'socket.io-client';
 import User from './Components/User.js';
 
@@ -11,12 +11,11 @@ const Main = ({ setUser, users }) => {
     });
     socket.on('new_message', (message) => {
         let mess = JSON.parse(message)
-        console.log(mess)
         if (users[mess.user]) {
             setUser(() => (
                 {
                     ...users,
-                    [mess.user]: { nmb_mess: users[mess.user]["nmb_mess"] + 1 }
+                    [mess.user]: { nmb_mess: users[mess.user]["nmb_mess"] + 1, ...mess }
                 }
             ))
         }
@@ -24,7 +23,7 @@ const Main = ({ setUser, users }) => {
             setUser(() => (
                 {
                     ...users,
-                    [mess.user]: { nmb_mess: 1, image: mess.image }
+                    [mess.user]: { nmb_mess: 1, image: mess.image, name:mess.name, message: mess.message }
                 }
             ))
         }
