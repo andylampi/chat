@@ -2,11 +2,13 @@ import express from "express";
 import cors from "cors"
 import { Server } from "socket.io";
 import router from "./routes/index.js";
+import connectDb from "./db/connectDb.js";
 
 const app = express();
 app.use(cors({
   origin: "http://localhost:3000"
 }))
+connectDb()
 
 // Utilizza express.json() per analizzare il corpo delle richieste come JSON
 app.use(express.json());

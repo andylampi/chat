@@ -11,7 +11,7 @@ function App() {
     if(user_typed !== ""){
       post("http://127.0.0.1:5000/get_users", {user:user_typed}).then(el => {
         if(el.users.length > 0){
-          setUserSrch([...users_srch, ...el.users])
+          setUserSrch([...users_srch, el.users])
         }
       })
     }
@@ -29,6 +29,7 @@ function App() {
           {users_srch.length > 0 &&  <div className="show_users">
           {
             users_srch.map(el => {
+              console.log(el)
               return <User user={{}}/>
             })
           }
