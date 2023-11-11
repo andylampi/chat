@@ -19,7 +19,7 @@ const server = app.listen(5000); // Creazione di un server HTTP con Express
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Sostituisci con l'URL del tuo client React
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   }
 },); // Inizializzazione di Socket.IO con il server Express
